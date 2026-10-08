@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Géneros disponibles</h2>
+<ul>
+    {% for genero in generos %}
+        <li><strong>{{ genero.nombre }}</strong>: {{ genero.descripcion }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

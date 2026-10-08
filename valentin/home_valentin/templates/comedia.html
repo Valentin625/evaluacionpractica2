@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>Películas de Comedia</h2>
+<div class="row">
+    {% for pelicula in peliculas %}
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static pelicula.imagen %}" class="card-img-top" alt="{{ pelicula.nombre }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ pelicula.nombre }}</h5>
+                    <p class="card-text">Edad: {{ pelicula.edad }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
